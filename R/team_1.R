@@ -3,6 +3,8 @@ library(tidyverse)
 library(purrr)
 library(sf)
 
+# The function that allowed to create a data frame from a geometry variable
+
 team_1 <- function(file,tolerance) {
   ozbig <- read_sf(file)
   oz_st <- maptools::thinnedSpatialPoly(as(ozbig, "Spatial"), tolerance = tolerance, minarea = 0.001, topologyPreserve = TRUE)
