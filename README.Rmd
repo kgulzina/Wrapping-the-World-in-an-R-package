@@ -5,7 +5,50 @@ date: "3/13/2019"
 output: rmarkdown::github_document
 ---
 
-[Link](https://github.com/kgulzina/stat585lab3package) to the github repo is given.
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, messsage = FALSE, warning = FALSE)
+```
+
+The package stat585lab3package was created for lab3 in STAT 585. This package contains four functions (team_1,team_10,team_11,?) which can convert sf shape files to data frames. These functions are based on lab 2 activity in the stat585. 
+
+Here is a link to our GitHub 
+[Link](https://github.com/kgulzina/stat585lab3package) to the github repo where all code of the package is deposited.
+
+Load the package.
+```{r}
+install.packages("stat585lab3package")
+library(stat585lab3package)
+```
+
+# Functions
+## team_1
+The team_1 written by 
+`input`
+file: file path is a file path to a shape file
+tolerance: value used for thinning the polygon
+
+## team_10
+The team_10 function was written by 
+`input`
+file:file path to a shapefile
+tolerance: tolerance
+`Value`
+geo_info: dataframe containing geographic and additional information on polygons
+## team_11
+
+The team_11 function was written by Jing Zhao. This is the function created by team 11 in lab2 activity.
+
+`input`
+ file : input shape file datsest (.shp)
+ tolerance:  the value for thining the shape file. The tolerance is a single numeric value (e.g., 0.1)
+
+# Use the team_11 function to convert the shape file to a dataframe using example data
+# pring the head of the dataframe
+```{r}
+Aus_datfra <- team_11(Aus, 0.1)
+head(Aus_datfra)
+```
+
 
 
 
