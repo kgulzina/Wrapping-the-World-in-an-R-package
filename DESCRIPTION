@@ -9,3 +9,7 @@ License: MIT License
 Encoding: UTF-8
 LazyData: true
 Imports: tidyverse, purrr, sf, checkmate
+Suggests: 
+    testthat
+Imports:
+    checkmate
