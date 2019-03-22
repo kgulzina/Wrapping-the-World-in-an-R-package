@@ -11,8 +11,6 @@ LazyData: true
 Suggests: 
     testthat
 Imports:
-    checkmate
-Import:
    maptools
    dplyr
    purrr
