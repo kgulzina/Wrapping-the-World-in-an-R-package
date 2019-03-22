@@ -1,10 +1,11 @@
-#' Function team_10 reads in a shapefile of any country, sets a tolerance,
+#' team_10
+#' Reads in a shapefile of any country, sets a tolerance,
 #' and returns a dataframe with information on longitude, lattitude,
 #' group, id, and other specific information.
 #'
+#' @author Gulzina Kuttubekova
 #' @param file file path to a shapefile
 #' @param tolerance tolerance
-#'
 #' @return geo_info: dataframe containing geographic and additional
 #' information on polygons
 #' @importFrom checkmate expect_class expect_file expect_logical expect_numeric expect_string
@@ -15,6 +16,7 @@
 #' @importFrom purrr flatten
 #' @importFrom sf read_sf st_as_sf st_geometry_type
 #' @export team_10
+
 team_10 <- function(file, tolerance) {
     shpbig <- read_sf(file)
     shp_st <- maptools::thinnedSpatialPoly(
