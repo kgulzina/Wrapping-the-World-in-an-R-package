@@ -8,9 +8,16 @@ Description: The package creates the data frame from a geometry variable.
 License: MIT License
 Encoding: UTF-8
 LazyData: true
+<<<<<<< HEAD
 Imports: tidyverse, purrr, sf, checkmate
 Suggests: 
     testthat
+=======
+Suggests: 
+    testthat
+Imports:
+    checkmate
+>>>>>>> 174e48ce7ea03e20d6ead34f399d3ba9329479a7
 Import:
    maptools
    dplyr
@@ -19,4 +26,7 @@ Import:
    checkmate
    tidyr
 RoxygenNote: 6.1.1
+<<<<<<< HEAD
 
+=======
+>>>>>>> 174e48ce7ea03e20d6ead34f399d3ba9329479a7
