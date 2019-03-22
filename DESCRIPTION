@@ -17,5 +17,7 @@ Imports:
    sf,
    checkmate,
    tidyr,
-   tidyverse
+   tidyverse,
+   methods,
+   rlang
 RoxygenNote: 6.1.1
