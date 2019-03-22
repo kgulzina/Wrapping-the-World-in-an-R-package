@@ -4,23 +4,19 @@
 #' group, id, and other specific information.
 #'
 #' @author Gulzina Kuttubekova
-#' @import tidyverse
-#' @import purrr
-#' @import sf
-#' @import checkmate
-#'
 #' @param file file path to a shapefile
-#' @param tolerance is a numerical value used for thinning the polygons
-#'
-#' @export
-#'
+#' @param tolerance tolerance
 #' @return geo_info: dataframe containing geographic and additional
 #' information on polygons
+#' @importFrom checkmate expect_class expect_file expect_logical expect_numeric expect_string
+#' @importFrom maptools thinnedSpatialPoly
+#' @importFrom dplyr select group_by mutate as_tibble %>%
+#' @importFrom tidyr unnest
+#' @importFrom methods as
+#' @importFrom purrr flatten
+#' @importFrom sf read_sf st_as_sf st_geometry_type
+#' @export team_10
 
-#file path for now
-#path = "./data/gadm36_AUS_shp/gadm36_AUS_1.shp"
-
-## ADD checks and assure thats!!!!!
 team_10 <- function(file, tolerance) {
     shpbig <- read_sf(file)
     shp_st <- maptools::thinnedSpatialPoly(
@@ -42,4 +38,3 @@ team_10 <- function(file, tolerance) {
     # return a dataframe with geographic and additional information
     return(geo_info)
 }
-
