@@ -1,22 +1,26 @@
-#' Function team_10 reads in a shapefile of any country, sets a tolerance,
+#' team_10
+#' Reads in a shapefile of any country, sets a tolerance,
 #' and returns a dataframe with information on longitude, lattitude,
 #' group, id, and other specific information.
 #'
-#' @param file file path to a shapefile
-#' @param tolerance tolerance
-#'
-#' @return geo_info: dataframe containing geographic and additional
-#' information on polygons
+#' @author Gulzina Kuttubekova
 #' @import tidyverse
 #' @import purrr
 #' @import sf
 #' @import checkmate
 #'
+#' @param file file path to a shapefile
+#' @param tolerance is a numerical value used for thinning the polygons
+#'
 #' @export
+#'
+#' @return geo_info: dataframe containing geographic and additional
+#' information on polygons
 
 #file path for now
-path = "./data/gadm36_AUS_shp/gadm36_AUS_1.shp"
+#path = "./data/gadm36_AUS_shp/gadm36_AUS_1.shp"
 
+## ADD checks and assure thats!!!!!
 team_10 <- function(file, tolerance) {
     shpbig <- read_sf(file)
     shp_st <- maptools::thinnedSpatialPoly(
