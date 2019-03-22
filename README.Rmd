@@ -22,18 +22,19 @@ library(stat585lab3package)
 
 # Functions
 ## team_1
-The team_1 written by 
+The team_1 was written by Gani Agadilov. This is the function created by team 1 in lab2 activity.
 `input`
 file: file path is a file path to a shape file
 tolerance: value used for thinning the polygon
 
 ## team_10
-The team_10 function was written by 
+The team_10 function was written by Gulzina Kuttubekova. This is the function created by team 10 in lab2 activity.
 `input`
 file:file path to a shapefile
 tolerance: tolerance
 `Value`
-geo_info: dataframe containing geographic and additional information on polygons
+geo_info: dataframe containing geographic and additional information on polygons.
+
 ## team_11
 
 The team_11 function was written by Jing Zhao. This is the function created by team 11 in lab2 activity.
