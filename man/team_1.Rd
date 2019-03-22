@@ -11,6 +11,9 @@ team_1(file, tolerance)
 
 \item{tolerance}{is value used for thinning the polygon}
 }
+\value{
+df.oz.purr
+}
 \description{
 The function that allowed to create a data frame from a geometry variable
 }
