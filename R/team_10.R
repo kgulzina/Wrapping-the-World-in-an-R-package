@@ -8,16 +8,20 @@
 #' @param tolerance tolerance
 #' @return geo_info: dataframe containing geographic and additional
 #' information on polygons
-#' @importFrom checkmate expect_class expect_file expect_logical expect_numeric expect_string
-#' @importFrom maptools thinnedSpatialPoly
-#' @importFrom dplyr select group_by mutate as_tibble %>%
-#' @importFrom tidyr unnest
-#' @importFrom methods as
-#' @importFrom purrr flatten
-#' @importFrom sf read_sf st_as_sf st_geometry_type
+#' @import tidyverse
+#' @import dplyr
+#' @import purrr
+#' @import sf
+#' @import maptools
+#' @import methods
 #' @export team_10
 
 team_10 <- function(file, tolerance) {
+    # check if file path exists
+    check_file_exists(x = file)
+    # check if tolerance is numeric and within a [0,1] range
+    check_numeric(tolerance, lower = 0, upper = 1)
+
     shpbig <- read_sf(file)
     shp_st <- maptools::thinnedSpatialPoly(
         as(shpbig, "Spatial"), tolerance = tolerance,
@@ -34,7 +38,8 @@ team_10 <- function(file, tolerance) {
                group = row_number()) %>%
         unnest %>%
         setNames(c("name", "region","group", "long", "lat"))
+    # check if geo_info is data frame
+    checkDataFrame(geo_info)
 
-    # return a dataframe with geographic and additional information
     return(geo_info)
 }
