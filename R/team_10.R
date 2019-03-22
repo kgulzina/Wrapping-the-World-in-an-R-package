@@ -8,12 +8,15 @@
 #' @param tolerance tolerance
 #' @return geo_info: dataframe containing geographic and additional
 #' information on polygons
-#' @import tidyverse
-#' @import dplyr
-#' @import purrr
-#' @import sf
-#' @import maptools
-#' @import methods
+#' @importFrom checkmate expect_class expect_file expect_logical expect_numeric expect_string check_file_exists check_numeric checkDataFrame
+#' @importFrom dplyr %>% mutate select group_by row_number as_tibble
+#' @importFrom tidyr unnest
+#' @importFrom maptools thinnedSpatialPoly
+#' @importFrom methods as
+#' @importFrom purrr flatten map_df map_dfr map_depth
+#' @importFrom rlang .data
+#' @importFrom sf read_sf st_as_sf st_geometry_type
+#' @importFrom stats setNames
 #' @export team_10
 
 team_10 <- function(file, tolerance) {
@@ -27,16 +30,15 @@ team_10 <- function(file, tolerance) {
         as(shpbig, "Spatial"), tolerance = tolerance,
         minarea = 0.001, topologyPreserve = TRUE)
     shp <- st_as_sf(shp_st)
-    geo_info <- shp %>% select(NAME_1, geometry) %>%
+    geo_info <- shp %>% select(.data$NAME_1, .data$geometry) %>%
         group_by() %>%
-        mutate(coord = geometry %>% map(.f = function(m) flatten(.x=m)),
-               region = row_number()) %>%
-        unnest
+        mutate(coord = .data$geometry %>% map(.f = function(m) flatten(.x=m)),
+               region = row_number()) %>% unnest()
     st_geometry(geo_info) <- NULL
     geo_info <- geo_info %>%
-        mutate(coord = coord %>% map(.f = function(m) as_tibble(m)),
+        mutate(coord = .data$coord %>% map(.f = function(m) as_tibble(m)),
                group = row_number()) %>%
-        unnest %>%
+        unnest() %>%
         setNames(c("name", "region","group", "long", "lat"))
     # check if geo_info is data frame
     checkDataFrame(geo_info)
