@@ -2,7 +2,7 @@
 title: "Lab 3"
 author: "Jing Zhao, Gulzina Kuttubekova, Agadilov Gani, Joshua Budi"
 date: "3/13/2019"
-output: html_document
+output: rmarkdown::github_document
 ---
 
 [Link](https://github.com/kgulzina/stat585lab3package) to the github repo is given.

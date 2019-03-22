@@ -1,6 +1,7 @@
 #' Team 11 Function
 #'
-#' Function based on the work by lab group 5 that converts a country shape file into a dataframe.
+#' Function based on team_11 in lab2
+#' Converts a shape file into a dataframe.
 #'
 #' @param file input shape file datsest (.shp)
 #' @param tolerance the value for thining the shape file. The tolerance is a single numeric value (e.g., 0.1)
@@ -20,8 +21,8 @@
 #' # A shape file for Austrilia is already stored in the package called (Aus)
 #'
 #' # Use the team_11 function to convert the shape file to a dataframe
-#' Aus_dafra <- team_11(Aus, 0.01)
-#' head(Aus_dafra)
+#' Aus_datfra <- team_11(Aus, 0.01)
+#' head(Aus_datfra)
 #'
 # Function to turn a shape file for a country into a dataframe
 team_11 <- function(file, tolerance){
@@ -56,7 +57,7 @@ team_11 <- function(file, tolerance){
 
     } else {
 
-        # otherwise Stop the function and return the comment as follow
+        # otherwise Stop the function and return the follow message
         stop("The file must be either a .shp file or an sf multipolygon file by sf.")
 
     }
