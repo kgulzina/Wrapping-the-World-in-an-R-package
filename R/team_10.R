@@ -20,8 +20,14 @@
 #' @export team_10
 
 team_10 <- function(file, tolerance) {
-    # check if file path exists
-    check_file_exists(x = file)
+    # check is path is character
+    if (is.character(file)) {
+        # check if file path exists
+        check_file_exists(x = file)
+    } else {
+        stop("Error: invalid file path")
+    }
+
     # check if tolerance is numeric and within a [0,1] range
     check_numeric(tolerance, lower = 0, upper = 1)
 
