@@ -2,7 +2,12 @@
 % Please edit documentation in R/team_10.R
 \name{team_10}
 \alias{team_10}
+<<<<<<< HEAD
 \title{Function team_10 reads in a shapefile of any country, sets a tolerance,
+=======
+\title{team_10
+Reads in a shapefile of any country, sets a tolerance,
+>>>>>>> 1e0319ed6d50a301931e4ef1590dfabefb07f333
 and returns a dataframe with information on longitude, lattitude,
 group, id, and other specific information.}
 \usage{
@@ -18,7 +23,18 @@ geo_info: dataframe containing geographic and additional
 information on polygons
 }
 \description{
+<<<<<<< HEAD
 Function team_10 reads in a shapefile of any country, sets a tolerance,
 and returns a dataframe with information on longitude, lattitude,
 group, id, and other specific information.
 }
+=======
+team_10
+Reads in a shapefile of any country, sets a tolerance,
+and returns a dataframe with information on longitude, lattitude,
+group, id, and other specific information.
+}
+\author{
+Gulzina Kuttubekova
+}
+>>>>>>> 1e0319ed6d50a301931e4ef1590dfabefb07f333

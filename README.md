@@ -1,6 +1,6 @@
-# stat585lab3package
+Lab 3
+================
+Jing Zhao, Gulzina Kuttubekova, Agadilov Gani, Joshua Budi
+3/13/2019
 
-This repo contains an R-package - "stat585lab3package"
-
-## CAUTION
-Please, don't push your .gitignore or .Rproj files! It will later cause problems!
+[Link](https://github.com/kgulzina/stat585lab3package) to the github repo is given.
