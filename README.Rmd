@@ -16,7 +16,6 @@ Here is a link to our GitHub
 
 Load the package.
 ```{r}
-install.packages("stat585lab3package")
 library(stat585lab3package)
 ```
 
