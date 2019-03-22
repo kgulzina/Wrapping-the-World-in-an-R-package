@@ -1,6 +1,6 @@
 Package: stat585lab3package
 Type: Package
-Title: Creates a data frame from a geometry variable 
+Title: Create a data frame from a geometry variable 
 Version: 0.1.0
 Author: Jing Zhao, Gulzina Kuttubekova, Agadilov Gani, Joshua Budi
 Maintainer: Gulzina Kuttubekova <kgulzina@iastate.edu> 
@@ -8,8 +8,19 @@ Description: The package creates the data frame from a geometry variable.
 License: MIT License
 Encoding: UTF-8
 LazyData: true
+<<<<<<< HEAD
 Imports: tidyverse, purrr, sf, checkmate
 Suggests: 
     testthat
 Imports:
     checkmate
+=======
+Import:
+   maptools
+   dplyr
+   purrr
+   sf
+   checkmate
+   tidyr
+RoxygenNote: 6.1.1
+>>>>>>> e5588c0419c7c3c36aea5e2dfdd1d9f0efb863fa
