@@ -7,16 +7,14 @@
 #'
 #' @return geo_info: dataframe containing geographic and additional
 #' information on polygons
-#' @import tidyverse
-#' @import purrr
-#' @import sf
-#' @import checkmate
-#'
-#' @export
-
-#file path for now
-path = "./data/gadm36_AUS_shp/gadm36_AUS_1.shp"
-
+#' @importFrom checkmate expect_class expect_file expect_logical expect_numeric expect_string
+#' @importFrom maptools thinnedSpatialPoly
+#' @importFrom dplyr select group_by mutate as_tibble %>%
+#' @importFrom tidyr unnest
+#' @importFrom methods as
+#' @importFrom purrr flatten
+#' @importFrom sf read_sf st_as_sf st_geometry_type
+#' @export team_10
 team_10 <- function(file, tolerance) {
     shpbig <- read_sf(file)
     shp_st <- maptools::thinnedSpatialPoly(
@@ -38,4 +36,3 @@ team_10 <- function(file, tolerance) {
     # return a dataframe with geographic and additional information
     return(geo_info)
 }
-
