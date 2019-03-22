@@ -1,9 +1,18 @@
+#' The function that allowed to create a data frame from a geometry variable
+#'
+#'
+#'
+#'@param file file path is a file path to a shape file
+#'@param tolerance is value used for thinning the polygon
+#'@return df.oz.purr
+#'@import tidyverse
+#'@import purrr
+#'@import sf
+#'@export
 
-library(tidyverse)
-library(purrr)
-library(sf)
+#file path for now
+path = "./data/gadm36_AUS_shp/gadm36_AUS_1.shp"
 
-# The function that allowed to create a data frame from a geometry variable
 
 team_1 <- function(file,tolerance) {
   ozbig <- read_sf(file)
@@ -18,6 +27,3 @@ team_1 <- function(file,tolerance) {
   return(df.oz.purr)
 }
 
-# The retun value is the dataframe
-
-result <- team_1(file="data/gadm36_AUS_shp/gadm36_AUS_1.shp", tolerance=0.1)
