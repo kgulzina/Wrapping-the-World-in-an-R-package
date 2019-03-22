@@ -8,4 +8,5 @@ Description: The package creates the data frame from a geometry variable.
 License: MIT License
 Encoding: UTF-8
 LazyData: true
-Imports: tidyverse, purrr, sf, checkmate
+Imports: tidyverse, purrr, sf, checkmate, foreign, maptools
+RoxygenNote: 6.1.1
