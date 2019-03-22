@@ -10,8 +10,6 @@
 #'@import sf
 #'@export
 
-#file path for now
-path = "./data/gadm36_AUS_shp/gadm36_AUS_1.shp"
 
 
 team_1 <- function(file,tolerance) {
