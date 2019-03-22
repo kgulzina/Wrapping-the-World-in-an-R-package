@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Jing Zhao, Gulzina Kuttubekova, Agadilov Gani, Joshua Budi
 Maintainer: Gulzina Kuttubekova <kgulzina@iastate.edu> 
 Description: The package creates the data frame from a geometry variable.
-License: MIT License
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
