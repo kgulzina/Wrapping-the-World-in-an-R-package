@@ -26,8 +26,8 @@ file: file path is a file path to a shape file
 tolerance: value used for thinning the polygon
 
 ``` r
-# Aus_t1 <- team_1("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
-# head(Aus_t1)
+Aus_t1 <- team_1("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
+head(Aus_t1)
 ```
 
 team\_10
