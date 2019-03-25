@@ -29,8 +29,8 @@ The team_1 was written by Gani Agadilov. This is the function created by team 1 
 file: file path is a file path to a shape file\
 tolerance: value used for thinning the polygon
 ```{r}
-# Aus_t1 <- team_1("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
-# head(Aus_t1)
+Aus_t1 <- team_1("./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 0.1)
+head(Aus_t1)
 ```
 
 ## team_10
@@ -60,8 +60,20 @@ Aus_t11 <- team_11("./data/gadm36_AUS_shp/gadm36_AUS_1.shp",0.1)
 head(Aus_t11)
 ```
 
+##team_3
+The team_3 function was written by Joshua Budi, borrowing the function created by team 3 in lab 2 activity. \
 
-We also creat an example data within the package called (Aus) using the following code.
+``input``\
+ file : input shape file datsest (.shp)\
+ tolerance:  the value for thining the shape file. The tolerance is a single numeric value (e.g., 0.1)
+
+```{r}
+Aus_t3 <- team_3("./data/gadm36_AUS_shp/gadm36_AUS_1.shp",0.1)
+head(Aus_t3)
+```
+ 
+ 
+We also created an example data within the package called (Aus) using the following code.
 ```{r message = FALSE}
 #convert shape file to sf file
 library(tidyverse)
