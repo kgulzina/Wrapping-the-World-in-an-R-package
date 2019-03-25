@@ -75,8 +75,23 @@ head(Aus_t11)
     ## 4     1 123.5536 -12.53039     4
     ## 5     1 123.5556 -12.53057     5
     ## 6     2 123.0178 -12.25917     6
+    
+team\_3
+--------
 
-We also creat an example data within the package called (Aus) using the following code.
+The team\_3 function was written by Joshua Budi. This is the function created by team 11 in lab2 activity.
+`input`
+file : input shape file datsest (.shp)
+tolerance: the value for thining the shape file. The tolerance is a single numeric value (e.g., 0.1)
+
+``` r
+# Use the team_11 function to convert the shape file to a dataframe using example data
+Aus_t3 <- team_3("./data/gadm36_AUS_shp/gadm36_AUS_1.shp",0.1)
+# print the head of the dataframe
+head(Aus_t3)
+```
+
+We also created an example data within the package called (Aus) using the following code.
 
 ``` r
 #convert shape file to sf file
