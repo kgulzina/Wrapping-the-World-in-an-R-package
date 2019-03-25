@@ -2,20 +2,16 @@
 #'
 #'
 #'@author Gani Agadilov
-#'@param file file path is a file path to a shape file
+#'@param file is a file path to a shape file
 #'@param tolerance is value used for thinning the polygon
 #'@return df.oz.purr
-#'@importFrom checkmate
-#'@importFrom dplyr
-#'@importFrom tidyr u
-#'@importFrom maptools
-#'@importFrom methods
-#'@importFrom purrr
-#'@importFrom rlang
-#'@importFrom sf
-#'@importFrom dplyr
+#'@importFrom maptools thinnedSpatialPoly
+#'@importFrom methods as
+#'@importFrom purrr flatten map_depth
+#'@importFrom rlang .data
+#'@importFrom sf read_sf st_as_sf
+#'@importFrom dplyr %>% bind_rows rename
 #'@export team_1
-
 
 
 
