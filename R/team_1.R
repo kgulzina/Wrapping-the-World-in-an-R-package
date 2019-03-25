@@ -1,14 +1,21 @@
 #' The function that allowed to create a data frame from a geometry variable
 #'
 #'
-#'
+#'@author Gani Agadilov
 #'@param file file path is a file path to a shape file
 #'@param tolerance is value used for thinning the polygon
 #'@return df.oz.purr
-#'@import tidyverse
-#'@import purrr
-#'@import sf
-#'@export
+#'@importFrom checkmate
+#'@importFrom dplyr
+#'@importFrom tidyr u
+#'@importFrom maptools
+#'@importFrom methods
+#'@importFrom purrr
+#'@importFrom rlang
+#'@importFrom sf
+#'@export team_1
+
+
 
 
 
@@ -21,7 +28,7 @@ team_1 <- function(file,tolerance) {
       purrr::flatten() %>%
       purrr::flatten() %>%
       bind_rows(.id = "group") %>%
-      rename("lat" = y, "long" = x)
+      rename("lat" = .data$y, "long" = .data$x)
   return(df.oz.purr)
 }
 
