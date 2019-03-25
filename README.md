@@ -3,7 +3,7 @@ Lab 3
 Jing Zhao, Gulzina Kuttubekova, Agadilov Gani, Joshua Budi
 3/13/2019
 
-The package stat585lab3package was created for lab3 in STAT 585. This package contains four functions (team\_1,team\_10,team\_11,?) which can convert sf shape files to data frames. These functions are based on lab 2 activity in the stat585.
+The package stat585lab3package was created for lab3 in STAT 585. This package contains four functions (team\_1,team\_10,team\_11,team_3) which can convert sf shape files to data frames. These functions are based on lab 2 activity in the stat585.
 
 Here is a link to our GitHub
 [Link](https://github.com/kgulzina/stat585lab3package) to the github repo where all code of the package is deposited.
@@ -76,7 +76,18 @@ head(Aus_t11)
     ## 5     1 123.5556 -12.53057     5
     ## 6     2 123.0178 -12.25917     6
 
-We also creat an example data within the package called (Aus) using the following code.
+team\_3
+--------
+
+The team\_3 function was written by Joshua Budi. This is the function created by team 3 in lab2 activity.
+`input`
+file : input shape file datsest (.shp)
+tolerance: the value for thining the shape file. The tolerance is a single numeric value (e.g., 0.1)
+``` r
+Aus_t3 <- team_3("./data/gadm36_AUS_shp/gadm36_AUS_1.shp",0.1)
+head(Aus_t3)
+```
+We also created an example data within the package called (Aus) using the following code.
 
 ``` r
 #convert shape file to sf file
