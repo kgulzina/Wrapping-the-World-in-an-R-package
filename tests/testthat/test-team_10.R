@@ -1,5 +1,4 @@
 context("test-team_10")
-filepath #<- system.file("data/gadm36_AUS_shp/gadm36_AUS_1.shp", ".shp", package = ???)
 
 test_that("takes in correct path", {
     # expect an error due to incorrect path
