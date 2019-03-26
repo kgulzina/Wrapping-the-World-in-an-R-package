@@ -10,10 +10,9 @@ test_that("takes in correct path", {
 
 
 test_that("tolerance is correct", {
-    # expect error due to tolerance out of range
-    expect_error(team_10(file = "./data/gadm36_AUS_shp/gadm36_AUS_1.shp", 13))
+    filepath <- system.file("gadm36_AUS_shp/gadm36_AUS_1.shp", package ="stat585lab3package")
     # expect error due to not numeric tolerance
-    expect_error(team_10(file = "./data/gadm36_AUS_shp/gadm36_AUS_1.shp", "test"))
+    expect_error(team_10(filepath, "test"))
 })
 
 
