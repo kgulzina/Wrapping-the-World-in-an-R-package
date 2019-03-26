@@ -16,14 +16,6 @@
 #' @importFrom sf read_sf st_as_sf st_geometry_type
 #'
 #' @export team_11
-#'
-#' @examples
-#' # A shape file for Austrilia is already stored in the package called (Aus)
-#'
-#' # Use the team_11 function to convert the shape file to a dataframe
-#' Aus_datfra <- team_11(Aus, 0.01)
-#' head(Aus_datfra)
-#'
 # Function to turn a shape file for a country into a dataframe
 team_11 <- function(file, tolerance){
 
