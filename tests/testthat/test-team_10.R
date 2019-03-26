@@ -10,14 +10,14 @@ test_that("takes in correct path", {
 
 
 test_that("tolerance is correct", {
-    # expect error due to tolerance out of range
-    filepath <- system.file("extdata/gadm36_AUS_1.shp", package ="stat585lab3package")
-    expect_error(team_10(filepath, 13))
+    # expect error due to tolerance
+    filepath <- system.file("inst/gadm36_AUS_1.shp", package ="stat585lab3package")
+    expect_error(team_10(filepath, "a"))
 })
 
 
 test_that("output is dataframe", {
     # expect data frame
-    filepath <- system.file("extdata/gadm36_AUS_1.shp", package ="stat585lab3package")
+    filepath <- system.file("inst/gadm36_AUS_1.shp", package ="stat585lab3package")
     expect_s3_class(team_10(filepath, 0.01), "data.frame")
 })
