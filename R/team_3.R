@@ -6,7 +6,6 @@
 #'@param file file path of the map data
 #'@param tolerance the unit value for thinning spatial map data (.shp)
 #'@import tidyverse
-#'@import rgeos
 #'@importFrom sf read_sf st_as_sf
 #'@importFrom maptools thinnedSpatialPoly
 #'@importFrom purrr flatten
