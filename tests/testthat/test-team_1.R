@@ -1,4 +1,4 @@
-context("test-team_1.R")
+context("test-team_1")
 
 test_that("team_1 fucnction provides a dataframe", {
     filepath <- system.file("gadm36_AUS_shp/gadm36_AUS_1.shp", package ="stat585lab3package")

@@ -1,10 +1,11 @@
-#' The function that allowed to create a data frame from a geometry variable
+#' The team_1 function allows to create a data frame from a geometry variable
 #'
 #'
 #'@author Gani Agadilov
 #'@param file is a file path to a shape file
 #'@param tolerance is value used for thinning the polygon
 #'@return df.oz.purr
+#'@importFrom checkmate expect_class expect_file
 #'@importFrom maptools thinnedSpatialPoly
 #'@importFrom methods as
 #'@importFrom purrr flatten map_depth
