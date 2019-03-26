@@ -14,6 +14,14 @@
 #'@export team_3
 
 team_3 <- function(file, tolerance) {
+    # check is path is character
+    if (is.character(file)) {
+        # check if file path exists
+        check_file_exists(x = file)
+    } else {
+        stop("Error: invalid file path")
+    }
+
     con_big <- read_sf(file)
     con_st <- maptools::thinnedSpatialPoly(
         as(con_big, "Spatial"), tolerance = tolerance,
