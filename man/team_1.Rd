@@ -2,12 +2,12 @@
 % Please edit documentation in R/team_1.R
 \name{team_1}
 \alias{team_1}
-\title{The function that allowed to create a data frame from a geometry variable}
+\title{The team_1 function allows to create a data frame from a geometry variable}
 \usage{
 team_1(file, tolerance)
 }
 \arguments{
-\item{file}{file path is a file path to a shape file}
+\item{file}{is a file path to a shape file}
 
 \item{tolerance}{is value used for thinning the polygon}
 }
@@ -15,5 +15,8 @@ team_1(file, tolerance)
 df.oz.purr
 }
 \description{
-The function that allowed to create a data frame from a geometry variable
+The team_1 function allows to create a data frame from a geometry variable
+}
+\author{
+Gani Agadilov
 }
