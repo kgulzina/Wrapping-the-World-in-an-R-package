@@ -75,27 +75,7 @@ Aus_t3 <- team_3("./data/gadm36_AUS_shp/gadm36_AUS_1.shp",0.1)
 head(Aus_t3)
 ```
 
-## an example
-We also created an example data within the package called (Aus) using the following code.
-```{r message = FALSE}
-#convert shape file to sf file
-library(tidyverse)
-library(sf)
-# Read in the shape file
-ozbig <- read_sf("./data/gadm36_AUS_shp/gadm36_AUS_1.shp")
-# Thin the file
-oz_st <- maptools::thinnedSpatialPoly(as(ozbig, "Spatial"), 
-                                      tolerance = 0.1, 
-                                      minarea = 0.001, 
-                                      topologyPreserve = TRUE)
-# Convert it to a sf file
-Aus <- st_as_sf(oz_st)
-```
-The same result yielded using this function.
-```{r}
-Aus_t11_2 <- team_11(Aus, 0.1)
-head(Aus_t11_2)
-```
+
 
 
 
