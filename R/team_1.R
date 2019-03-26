@@ -1,14 +1,19 @@
-#' The function that allowed to create a data frame from a geometry variable
+#' The team_1 function allows to create a data frame from a geometry variable
 #'
 #'
-#'
-#'@param file file path is a file path to a shape file
+#'@author Gani Agadilov
+#'@param file is a file path to a shape file
 #'@param tolerance is value used for thinning the polygon
 #'@return df.oz.purr
-#'@import tidyverse
-#'@import purrr
-#'@import sf
-#'@export
+#'@importFrom checkmate expect_class expect_file
+#'@importFrom maptools thinnedSpatialPoly
+#'@importFrom methods as
+#'@importFrom purrr flatten map_depth
+#'@importFrom rlang .data
+#'@importFrom sf read_sf st_as_sf
+#'@importFrom dplyr %>% bind_rows rename
+#'@export team_1
+
 
 
 
@@ -21,7 +26,7 @@ team_1 <- function(file,tolerance) {
       purrr::flatten() %>%
       purrr::flatten() %>%
       bind_rows(.id = "group") %>%
-      rename("lat" = y, "long" = x)
+      rename("lat" = .data$y, "long" = .data$x)
   return(df.oz.purr)
 }
 
