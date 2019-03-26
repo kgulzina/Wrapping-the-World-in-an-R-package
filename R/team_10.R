@@ -13,9 +13,9 @@
 #' @importFrom tidyr unnest
 #' @importFrom maptools thinnedSpatialPoly
 #' @importFrom methods as
-#' @importFrom purrr flatten map_df map_dfr map_depth
+#' @importFrom purrr flatten map_df map_dfr map_depth map
 #' @importFrom rlang .data
-#' @importFrom sf read_sf st_as_sf st_geometry_type
+#' @importFrom sf read_sf st_as_sf st_geometry<-
 #' @importFrom stats setNames
 #' @export team_10
 
